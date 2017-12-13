@@ -1,2 +1,2 @@
 # profile
-Sample of my profile page
+Profile page sample
