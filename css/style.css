@@ -1,0 +1,518 @@
+/*  Main stylesheet 
+    Author : Reniel Janadec Abogado
+    Date : 10/12/2017
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body
+{
+    background-color: rgb(255, 255, 255);
+    /*background-image: url('photo/orange.jpg');*/
+    font-family: Raleway, Helvetica, sans-serif;
+    color: rgba(59, 55, 55, 0.932);
+}
+
+.myheader
+{
+    background-color:  rgb(43, 236, 156); /* cool shade of violet #4f485c;*/
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}        
+
+myheader
+{
+    font-size: 15px;
+    padding: 3px 210px 0 5%;
+}
+
+h1.name
+{
+    color: #fff;
+    font-size: 22px;
+    padding: 15px 35px;
+    float: left;
+    margin: 10px;
+}
+            
+h1.name > a
+{
+    color: rgba(99, 94, 94, 0.932);
+    text-decoration: none;
+}
+
+h1.welcome
+{
+    font-family: 'Raleway';
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+p.index-notes
+{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: rgba(51, 47, 47, 0.932);
+    opacity: 0.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.index-message
+{
+    font-size: 12pt;
+    max-width: 320px;   
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -130px;
+} 
+
+.index-message > .profile-pic
+{
+    height: 90%;
+    max-width: 90%;
+    margin-left: 27%;
+    margin-bottom: 10px;
+    border-radius: 60%;
+}
+
+/* STYLES FOR MAIN CONTAINERS */
+.index-selectmenu
+{
+    max-width: 720px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -120px;
+
+    outline: none;
+}
+
+.index-selectmenu > select
+{
+    opacity: 0.5;
+    -webkit-appearance: none;
+    text-align: center;
+    text-align-last: center;
+}
+
+.index-selectmenu > select:hover
+{
+    letter-spacing: 12px;
+    font-weight: 700;
+    border: 1px solid rgb(54, 202, 221);
+    transition: all ease-in-out 300ms;
+    opacity: 10;
+}
+
+ .container-about
+{
+    /*background-color: rgba(245, 239, 239, 0.925);*/
+    font-family: 'Raleway', sans-serif;
+    color: rgba(61, 57, 57, 0.932);
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    /*border: 1px solid rgb(212, 208, 208);*/
+    padding: 60px 90px;
+
+    width: 35%;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+/* span elements about */
+span#capital-letter
+{
+    font-size: 4em;
+    font-weight: 300;
+}
+
+span#fullname-bold
+{
+    font-weight: 700;
+}
+
+/*.container-about > p
+{
+    max-width: 900px;
+}*/
+
+.container-about > p
+{
+    font-weight: 300;
+}
+
+
+/*.index-selectmenu:focus
+{
+    border: 1px solid rgb(245, 167, 66);
+}*/
+
+.container-contact
+{
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    line-height: 20px;
+    border: 0.5px solid rgb(161, 218, 204);
+    padding: 30px 45px;
+
+    max-width: 620px;
+    margin-top: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+    text-align: center;
+    overflow: hidden;
+}
+/* END MAIN CONTAINERS */
+
+
+.container-contact > p
+{
+    font-size: 15px;
+}
+
+.welcome-link
+{
+    text-decoration: none;
+}
+
+a.welcome-link-anchor
+{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+p.index-notes, copyright, .quotes
+{
+    font-size: 12pt;
+    opacity: 0.7;
+    margin-bottom: 3px;
+}
+
+h2.yourself
+{
+    font-size: 190%;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+
+.skills-list > li
+{
+    margin-left: -25px;
+}
+
+.contact-headings
+{
+    font-size: 15px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.contact-headings > a
+{
+    color: white;
+}
+
+.social > a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.social > a:hover
+{
+    color: rgb(38, 202, 153);
+    transition: all 0.5s;
+}
+
+.contact-form
+{
+    padding: 15px 10px;
+}
+
+.contact > p
+{
+    font-size: 12.5pt; 
+}
+
+/* textboxes */
+.feedback-input
+{
+    font-family: Raleway;
+    font-size: 15px;
+    line-height: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(153, 149, 146);
+    margin-top: 5px;
+    margin-bottom: 12px;
+    padding: 12px 17px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+}
+
+.feedback-input:focus
+{
+    border: 1px solid rgb(117, 117, 114);
+}
+
+/* for select menu tag */
+.feedback-input-select
+{
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(105, 102, 102);
+    font-size: 12pt;
+    text-align: center;
+    color: rgba(99, 94, 94, 0.932);
+    padding: 2px;
+    cursor: pointer;
+    padding: 25px;
+    
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-appearance: none; /* remove that freakin' arrow in mozilla */
+    outline: none;
+    overflow: hidden;
+}
+
+/*.feedback-input-select:hover
+{
+    background-color: rgb(233, 195, 72);
+    border: 1px solid rgb(233, 195, 72);
+    transition: all 0.3s;
+    outline: none;
+}*/
+
+
+.submit
+{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(97, 91, 91);
+    width: 100%;    
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgb(60, 198, 233);
+    text-transform: uppercase;
+}
+
+.submit:hover
+{
+    background-color: rgb(53, 151, 100);
+    letter-spacing: 3px;
+    border: 1px solid rgb(53, 151, 100);
+    color: #fff;
+    transition: ease 0.5s;
+    outline: none;
+}
+
+.welcome-links
+{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome-links p
+{
+    margin-top: 20px;
+    margin-bottom: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(226, 216, 216);
+    padding: 30px;
+}
+
+.welcome-links p:hover
+{
+    background-color:  rgb(97, 180, 138);
+    border: 1px solid  rgb(97, 180, 138);
+    transition: all 0.6s;
+}
+
+.ratings
+{
+    width: 30px;
+    margin-left: 25px;
+}
+
+p.timeline-text
+{
+    margin-top: -30px;
+}
+
+
+p.timeline-desc
+{
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+p.social > a
+{
+    color: rgb(56, 54, 54);
+    font-size: 15px;
+}
+
+h3.timeline-title
+{
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+/* ICONS */
+.contact-icons
+{
+    display: inline;
+    padding-top: 35px;
+    margin-left: 3px;
+}
+
+.about-icons
+{
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+
+::-webkit-input-placeholder
+{
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 10pt;
+}
+
+::-moz-placeholder
+{
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 10pt;
+}
+
+/*footer
+{
+    background-color: rgb(63, 226, 169);
+    text-align: center;
+    margin-top: 250px;
+    position: absolute;
+    padding: 45px;
+    top: 200%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}* /
+
+/* go back to menu */
+#myBtn
+{
+    font-family: Raleway;
+    margin-right: 12px;
+    float: right; 
+    padding: 10px;
+    color: rgb(78, 72, 72);
+    background-color:#fff; 
+    border: 1px solid rgb(60, 198, 233);
+    cursor: pointer;
+}
+
+#myBtn:hover
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 38, 39);
+    border: 1px solid  rgb(37, 38, 39);
+    transition: ease all 0.5s;
+    outline: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen 
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+{
+    .index-message
+    {
+        margin-top: 90px;
+    }
+
+    .container-about
+    {
+        font-size: 10px;
+        margin-top: -170px;
+        margin-left: -60px;
+        margin-right: 10px;
+        width: 57.5%;
+    }
+
+    .container-contact
+    {
+        margin-top: -10px;
+        overflow-wrap: break-word;
+    }
+
+    .container-about > p
+    {
+        width: 160%;
+    }
+
+    .index-selectmenu
+    {
+        margin-bottom: 100px;
+    }
+
+    #myBtn
+    {
+        overflow-wrap: normal;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width: 1024px)
+{
+    /* iPad portrait landscape rules */
+
+    .index-selectmenu
+    {
+        width: 500px;
+    }
+
+    .container-about
+    {
+        margin-top: 50px;
+        width: 520px;
+    }
+
+    .container-contact
+    {
+        width: 500px;        
+    }
+}

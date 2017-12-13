@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html ng-app = "demo">
+    <head>
+        <title> Reniel Janadec | Portfolio </title>
+
+          <!-- Angular  | TESTING -->
+          <script src = "angular/angular.min.js"></script>
+            
+         <!-- app js angular -->
+         <script src = "angular/application/app.js"></script>
+
+         <!-- scroll top js -->
+         <script src = "js/scrolltop.js"></script>
+
+          <!-- stylesheet -->
+          <link rel = "stylesheet" href = "css/style.css">
+          
+          <link rel = "icon" href = "photo/profile.jpg">
+
+          <meta name = "viewport" content = "width=device-width initial-scale = 1.0">
+   
+
+    </head>
+<body>
+
+   <header class = "myheader">
+        <!--<h2 class = "logo">DecNepomuceno</h2>
+        <nav class = "myheader-nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+        </nav>-->
+    </header>
+
+    <!--    <div class = "container-index">
+
+            ORIGINAL INDEX  NAVIGATION LIST
+            <a href = "about.html" class = "welcome-links"><p>{{ "ABOUT" }}</p></a>
+            <a href = "contact.html" class = "welcome-links"><p>{{ "CONTACT" }}</p></a>
+            <a href = "#" class = "welcome-links"><p> {{ "RESUME" }}</p></a> 
+            
+            </div> -->
+    
+    <!-- ng-controller for index page -->
+    <div class = "index-message" ng-controller = "index">
+        <img src = "photo/profile.jpg" class = "profile-pic">
+
+        <h1 class = "welcome"> {{ welcome }} </h1>
+        <p class = "index-notes"> {{ portfolio }}</p>
+        <p class = "index-notes">{{ location }}</p>
+        <p class = "index-notes">{{ year }}</p>
+    </div>
+
+     <!-- angular menu -->
+     <div class = "index-selectmenu">
+            <select class = "feedback-input-select" data-ng-model = "menu">
+                <option value = "" class = "default-option"> MENU </option>
+                <option value = "about"> ABOUT </option>
+                <option value = "contact"> CONTACT </option>
+            </select>
+        </div>
+    
+    <!-- switch menu the angular way -->
+    <div data-ng-switch = "menu">
+        <!-- ng-controller for skills -->
+        <div ng-switch-when = "about" ng-controller = "skillsController">
+            <div class = "container-about">
+                <h2 class = "yourself"> About <!--<span class = "about-icons"><img src = "photo/user.png"></span>--></h2>
+                    <p> <span id = "capital-letter">H</span>ello! I'm <span id = "fullname-bold">Reniel Janadec N. Abogado</span>, a recent college graduate from Kalayaan College 
+                        with a degree in Bachelor of Science in Computer Science.
+                        I would like to learn more about the new technologies not just only in web development but also in software. 
+                    </p>
+
+                    <p> I would also like to pursue a career as a web developer.</p>
+                    <p>Currently I am studying Anuglar JS to develop web applications (and to make the Internet a bit pretty, at least)</p>
+
+                <h2 class = "yourself"> Skills <!--<span class = "about-icons"><img src = "photo/man.png"></span>--></h2>
+
+                    <ul class = "skills-list">
+                        <li ng-repeat = "skill in skills">{{ skill }}</li>
+                    </ul>
+                            
+                <h2 class = "yourself"> Trainings Attended <!--<span class = "about-icons"><img src = "photo/presentation.png"></span>--></h2>
+                    <p> A month after graduation, I enrolled in a Web Development short course under TESDA in Meralco Foundation Institute. 
+                        This helped me a lot in honing my skills I acquired in college. </p>
+                
+                    <p>As part of the TESDA program, the training also has an internship program. I'm looking forward to discover and learn new tools and skills; as well
+                       as making friends too.
+                    </p>
+                                        
+                <h2 class = "yourself">Timeline <!--<span class = "about-icons"><img src = "photo/timeline.png"></span>--></h2>
+                    <p class = "timeline-text"> Brief timeline of my education and training</p>   
+                            <h3 class = "timeline-title"> Web Development </h3>
+                                <p class = "timeline-desc"> Short Course </p>
+                                <p>Meralco Polytechnic Foundation (Formerly Meralco Foundation Institute)</p>
+                                <p>MFI Bldg. Ortigas Avenue, Pasig City</p>
+                                <p> July - August 2017  </p>
+                
+                            <h3 class = "timeline-title"> Kalayaan College </h3>
+                                <p class = "timeline-desc">Tertiary</p>
+                                <p> Kalayaan College </p>
+                                <p> #22 Manga Rd. Aurora Blvd. New Manila, Quezon City</p>
+                                <p> 2012 - 2017 </p>
+                
+                <h2 class = "yourself"> Others <!--<span class = "about-icons"><img src = "photo/dog.png"></span>--> </h2>
+                    <p>When I'm not glued in computers, I usually go out for a bike or play with our dog.</p>
+                    <p>Or sometimes I just think about of something else: music or food.</p> 
+
+                
+               <button onclick = "topfunction()" id = "myBtn" title = "Menu"> Back to Menu </button>
+
+            </div>
+        </div> <!-- END about angular switch -->
+    
+        <div ng-switch-when = "contact">
+            <div class = "container-contact">
+                <h1>Contacts</h1>
+                    <p>Thanks for stopping by. You can reach me at the following: </p>
+                        <h3 class = "contact-headings"> THROUGH EMAIL </h3>
+                        <p> renieljanadecabogado@gmail.com </p>
+            
+                        <hr/>
+                            
+                            
+                        <h3 class = "contact-headings"> THROUGH SOCIAL MEDIA </h3>
+                        <p class = "social"><a href = "https://www.instagram.com/decnepomuceno" target="_blank">Instagram</a></p>
+                        <p class = "social"><a href = "https://www.twitter.com/decnepomuceno/" target="_blank">Twitter</a></p>
+                            
+                        <hr/>
+
+                             
+                        <h3 class = "contact-headings"> THROUGH MOBILE </h3>
+                        <p>099xxxxxxxx</p>
+                                
+                        <hr>
+                            
+                        <h3 class = "contact-headings"> LET'S TALK </h3>
+                            
+                        <form action = "#" name = "contactForm" method = "POST" class = "contact-form"  ng-controller = "formController" ng-submit = "contactForm.$valid" novalidate>
+                             <!-- Angular JS Form Validations -->
+                             <span ng-show = "contactForm.name.$touched && contactForm.name.$invalid"> * Name is required</span>
+                             <input type = "text" name = "name" class = "feedback-input" ng-model = "name" placeholder = "Your Name" required>
+
+                             <span ng-show = "contactForm.email.$dirty && contactForm.email.$invalid"> * Enter valid email address </span>
+                             <br />
+                            
+                             <span ng-show = "contactForm.email.$touched && contactForm.email.$error.required"> * Email address is required </span>
+                             <input type = "email" name = "email" class = "feedback-input" placeholder = "Your Email Address" ng-model = "email" required>
+                                
+                             <span ng-show = "contactForm.message.$touched && contactForm.message.$error.required"> * It would be much appreciated if you leave a message </span>
+                             <!--<span ng-show = "contactForm.name.$valid && contactForm.message.$touched">, {{ name }}</span>-->
+                             <textarea name = "message" cols = "30" rows = "20" placeholder = "Your Message" class = "feedback-input" ng-model = "message" required></textarea>
+    
+                             <input type = "submit" name = "submit" class = "submit" value = "SUBMIT" ng-disabled = "contactForm.$invalid">
+                                <!-- End Angular Form Validation -->
+                            </form>
+                           <!-- <button onclick = "topfunction()" id = "myBtn" class = "myBtn" title = "Menu"> Back to Menu </button>-->
+                </div>
+            </div>
+            <!-- end switch menu the angular way -->
+        </div>
+
+    <!--<footer>
+        Reniel Janadec &copy;
+    </footer>-->
+</body>
+</html>
